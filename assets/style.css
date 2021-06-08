@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'gi';
+  src: url('./gi.ttf') format('truetype');
+  font-display: swap;
+}
+
+html,
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'gi';
+}
+
+.top {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./img/top.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top .love {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  font-size: 5rem;
+  font-style: italic;
+  line-height: 8.4rem;
+  letter-spacing: 0.4rem;
+  color: #fafafa;
+}
+
+.top .love::after {
+  content: '';
+  position: absolute;
+  display: block;
+  border-bottom: solid 0.2rem white;
+  bottom: 16%;
+  width: 130%;
+}
+
+@media screen and (max-width: 1400px) {
+  .top {
+    background-position-x: 34%;
+  }
+  .top .love {
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .top .love {
+    left: unset;
+    top: unset;
+    bottom: 0;
+    white-space: nowrap;
+    font-size: 1.8rem;
+  }
+  .top .love::after {
+    bottom: 33%;
+  }
+}
